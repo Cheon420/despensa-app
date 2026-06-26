@@ -11,6 +11,7 @@ import styles from './App.module.css'
 export default function App() {
   const [tab, setTab] = useState('despensa')
   const [loggedIn, setLoggedIn] = useState(() => localStorage.getItem('despensa_auth') === '1')
+  const [boughtIds, setBoughtIds] = useState(new Set())
   const { items, stores, loading, toggleItem, addItem, deleteItem, addStore, deleteStore } = useData()
 
   if (!loggedIn) {
@@ -58,6 +59,8 @@ export default function App() {
             items={items}
             stores={stores}
             onToggle={toggleItem}
+            boughtIds={boughtIds}
+            setBoughtIds={setBoughtIds}
           />
         )}
         {tab === 'config' && (

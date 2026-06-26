@@ -1,9 +1,7 @@
-import { useState } from 'react'
 import styles from './Tab.module.css'
 import listaStyles from './ListaTab.module.css'
 
-export default function ListaTab({ items, stores, onToggle }) {
-  const [boughtIds, setBoughtIds] = useState(new Set())
+export default function ListaTab({ items, stores, onToggle, boughtIds, setBoughtIds }) {
 
   const needed = items.filter(i => !i.have || boughtIds.has(i.id))
 
