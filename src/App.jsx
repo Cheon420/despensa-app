@@ -4,12 +4,18 @@ import DespensaTab from './components/DespensaTab'
 import TiendasTab from './components/TiendasTab'
 import ListaTab from './components/ListaTab'
 import ConfigTab from './components/ConfigTab'
+import LoginScreen from './components/LoginScreen'
 import { useData } from './hooks/useData'
 import styles from './App.module.css'
 
 export default function App() {
   const [tab, setTab] = useState('despensa')
+  const [loggedIn, setLoggedIn] = useState(() => localStorage.getItem('despensa_auth') === '1')
   const { items, stores, loading, toggleItem, addItem, deleteItem, addStore, deleteStore } = useData()
+
+  if (!loggedIn) {
+    return <LoginScreen onLogin={() => setLoggedIn(true)} />
+  }
 
   if (loading) {
     return (
