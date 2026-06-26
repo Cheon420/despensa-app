@@ -1,0 +1,55 @@
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.vaciarBtn {
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 99px;
+  background: #fee2e2;
+  color: #b91c1c;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.btnRojo {
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 99px;
+  background: #fee2e2;
+  color: #b91c1c;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btnVerde {
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: 99px;
+  background: #dcfce7;
+  color: #15803d;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: default;
+  white-space: nowrap;
+}
+
+.compradoRow {
+  opacity: 0.6;
+}
+
+.compradoName {
+  text-decoration: line-through;
+}
